@@ -1,3 +1,0 @@
-pre
-image
-post
