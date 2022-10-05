@@ -1,17 +1,37 @@
-# Post
 {
-			"type": "context",
+  "type": "section",
+  "text": {
+    "type": "mrkdwn",
+    "text": "{{$json["message_body"]}}"
+  }
+},
+{
+  "type": "divider"
+},
+{
+			"type": "actions",
 			"elements": [
 				{
-					"type": "image",
-					"image_url": "https://pbs.twimg.com/profile_images/625633822235693056/lNGUneLX_400x400.jpg",
-					"alt_text": "cute cat"
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "🤯 High Energy"
+					},
+					"style": "primary",
+					"value": "good"
 				},
 				{
-					"type": "mrkdwn",
-					"text": "*Cat* has approved this message."
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "🪫 Low Energy"
+					},
+					"style": "danger",
+					"value": "bad"
 				}
 			]
 		}
-	]
+]
 }
