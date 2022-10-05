@@ -1,0 +1,1 @@
+{{$json["message_pre"]}}{{$json["message_post"]}}
