@@ -24,7 +24,7 @@
 				},
 				{
 					"type": "mrkdwn",
-					"text": "*Message ID:*\n{{$json["messade_id"]}}"
+					"text": "*Message ID:*\n{{$json["message_id"]}}"
 				},
 				{
 					"type": "mrkdwn",

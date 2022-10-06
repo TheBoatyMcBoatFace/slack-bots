@@ -1,1 +1,98 @@
-{{$json["message_pre"]}}{{$json["message_image"]}}{{$json["message_post"]}}
+[{
+			"type": "header",
+    "block_id": "messages_header",
+			"text": {
+				"type": "plain_text",
+				"text": "Omega Message Tracker",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+    "block_id": "messages_meta",
+			"fields": [
+				{
+					"type": "mrkdwn",
+					"text": "*Message Type:*\n{{$json["message_type"]}}"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Date Sent:*\n{{$json["date"]}}"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Segment Count:*\n{{$json["message_segments"]}}"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Message ID:*\n{{$json["message_id"]}}"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*From Phone:*\n{{$json["from_phone"]}}"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},
+{
+			"type": "image",
+    "block_id": "messages_image",
+			"image_url": "{{$json["media_url_0"]}}",
+			"alt_text": "MMS Image"
+		},
+{
+  "type": "section",
+"block_id": "messages_body",
+  "text": {
+    "type": "mrkdwn",
+    "text": "{{$json["body_encoded"]}}"
+  }
+},
+{
+  "type": "divider"
+},
+{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "🤯 High Energy"
+					},
+					"style": "primary",
+					"value": "1"
+				},
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "🪫 Low Energy"
+					},
+					"style": "danger",
+					"value": "-1"
+				}
+			]
+		},
+    {
+    "type": "section",
+    "block_id": "section678",
+    "text": {
+      "type": "mrkdwn",
+      "text": "Who sent this message?"
+    },
+    "accessory": {
+      "action_id": "text1234",
+      "type": "external_select",
+      "placeholder": {
+        "type": "plain_text",
+        "text": "Select Sender"
+      },
+      "min_query_length": 3
+    }
+  }
+]
